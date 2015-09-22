@@ -8,3 +8,4 @@
 	* Update /AScoopOfVanilla/ASOV/WhitelistMaint.py to remove old users (30/60/90) from whitelist.
 	* Hidden Achievements sidebar update via PRAW.
 	* Online players on Sidebar via PRAW & RCON.
+	* Change consle chat to python and enable direct messaging and console commands.
