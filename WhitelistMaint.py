@@ -52,7 +52,7 @@ for x in range(0,len(#whitelistimport)):
 
 for x in range(0, len(players)):
 
-
+	# Need to parse JSON data /vanilla/whitelist.json for player name and uuid
 
 	updateQuery = """begin tran
 	update table with (serializable) set
@@ -63,3 +63,5 @@ for x in range(0, len(players)):
 		Insert Into Whitelist VALUES ('')		
 	end
 commit tran""".format(__sqltable__, player[x])
+
+
