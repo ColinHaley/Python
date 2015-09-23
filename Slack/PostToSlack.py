@@ -33,9 +33,9 @@ time.sleep(2.5)
 client.chat_post_message(__channel__, 'Update-ComputerStatistics; End time: 2:05', username=__username__)
 __username__ = 'SQL Job Logger'
 time.sleep(2.5)
-client.chat_post_message(__channel__, 'Repopulate CustomCMDB Table; Start time: 2:05', username=__username__)
+client.chat_post_message(__channel__, 'Repopulate CMDB Table; Start time: 2:05', username=__username__)
 time.sleep(2.5)
-client.chat_post_message(__channel__, 'Repopulate CustomCMDB Table; End time: 2:05', username=__username__)
+client.chat_post_message(__channel__, 'Repopulate CMDB Table; End time: 2:05', username=__username__)
 
 raw_input()
 __channel__ = '#logging-serverstats'
