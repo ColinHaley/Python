@@ -1,5 +1,5 @@
 """
-__author__	= 'Colin Haley, aka Kazra, aka /u/Gemjump'
+__author__	= 'Colin Haley, aka /u/Gemjump'
 __purpose__ 	= 'Watch a list of subreddits for a different list of keywords'
 
 # Other Resources
@@ -33,4 +33,4 @@ for x in range(0,len(listOfSubreddits)):
             post = next(posts)
             for x in range(0,len(listOfKeyWords)):
                 if listOfKeyWords[x] in post:
-                    print post.id
+                    print post.id   
