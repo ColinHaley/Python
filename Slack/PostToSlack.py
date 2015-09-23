@@ -25,8 +25,9 @@ __token__ = config.get('LogPoster','token')
 # User token from config file to generate 
 client = SlackClient(__token__)
 __channel__ = '#logging-scripts'
-__username__ = 'Colin'
+__username__ = 'TRS Logger'
+
 while True:
-    __message__ = raw_input()
+    __message__ = raw_input('What do you want to post to {0} as {1}? '.format(__channel__,__username__))
     client.chat_post_message(__channel__, __message__, username=__username__)
 
