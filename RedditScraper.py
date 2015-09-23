@@ -19,7 +19,7 @@ except:
 r = praw.Reddit('Searcher for things I care about on Reddit; Made my /u/Gemjump; Run on Debian Wheezy')
 
 listOfSubreddits = ['frugalmalefashion']
-listOfKeyWords = ['Wolverine']
+listOfKeyWords = ['Wolverine','REI']
 
 for x in range(0,len(listOfSubreddits)):
     
