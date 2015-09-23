@@ -57,4 +57,3 @@ while True:
         else:
             client.chat_post_message(__channel__, __message__, username=__username__)
 
-#This is a comment
