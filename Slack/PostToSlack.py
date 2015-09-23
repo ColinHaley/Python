@@ -29,5 +29,8 @@ __username__ = 'TRS Logger'
 
 while True:
     __message__ = raw_input('What do you want to post to {0} as {1}? '.format(__channel__,__username__))
-    client.chat_post_message(__channel__, __message__, username=__username__)
-
+    if not __message__ == '':
+        if '!newname' in __message__:
+            __username__ = __message__.split(' ',1)[1]
+        else:
+            client.chat_post_message(__channel__, __message__, username=__username__)
