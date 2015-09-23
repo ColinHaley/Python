@@ -40,9 +40,9 @@ client.chat_post_message(__channel__, 'Repopulate CustomCMDB Table; End time: 2:
 raw_input()
 __channel__ = '#logging-serverstats'
 __username__ = 'Statistics Logger'
-client.chat_post_message(__channel__, 'EUSAPPBAL500: [CPU]:20% - [RAM]:64% - [Tasks Running]:2', username=__username__)
+client.chat_post_message(__channel__, 'APPSERVER01: [CPU]:20% - [RAM]:64% - [Tasks Running]:2', username=__username__)
 time.sleep(1)
-client.chat_post_message(__channel__, 'SQLTRSPBAL500: [CPU]:4% - [RAM]:15% - [Open Connections]:12', username=__username__)
+client.chat_post_message(__channel__, 'SQLSERVER01: [CPU]:4% - [RAM]:15% - [Open Connections]:12', username=__username__)
 
 raw_input()
 __channel__ = '#logging-scripts'
