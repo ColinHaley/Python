@@ -27,10 +27,10 @@ for x in range(0,len(listOfSubreddits)):
 
     posts = sub.get_new()
 
-    while True:
+    While True:
         try:
             time.sleep(2.5)
             post = next(posts)
             for x in range(0,len(listOfKeyWords)):
-                if listOfKeyWords[x] in post:
-                    print post.id   
+                if listOfKeyWords[x] in post.title:
+                    print post.id
