@@ -11,6 +11,7 @@ __sqltable__ = config.get('WhitelistMaint','table')
 __sqlusername__ = config.get('WhitelistMaint','Username')
 __sqlpassword__ = config.get('WhitelistMaint','Password')
 __sqlserver__ = 'localhost'
+__whitelist__ = '/home/minecraft/srv/vanilla/whitelist.json'
 
 try:
 	server = MinecraftServer('asov.info',__rconport__)
@@ -42,11 +43,15 @@ else:
 	db.rollback()
 
 # end edit location
-# Purpose of Fork - Add individual updates 
+# Purpose of branch - Add individual updates 
 # NOT FUNCTIONAL YET!
 
-for x in range(0,len(#whitelistimport)):
-	if(data[x]['name'] <> in(queryPlayers)):
+if result != len(players):
+    jsonData = open(__whitelist__).read()
+    data = json.loads(jsonData)
+    
+    for x in range(0,len(#whitelistimport)):
+        if(data[x]['name'] <> in(queryPlayers)):
 		#INSERT QUERY!
 
 
@@ -64,4 +69,10 @@ for x in range(0, len(players)):
 	end
 commit tran""".format(__sqltable__, player[x])
 
+db = MySQLdb.connect(__SERVER__,__USERNAME__,__PASSWORD__,__DATABASE__)
+cursor = db.cursor()
 
+for x in range(0, totalItem):
+    try:
+        #Modify for your table structure, initial commit for asov: User, UUID, Approver, Approve Date, Last Login, Exempt from epiry.
+        cursor.execute("INSERT INTO Users VALUES ('{0}','{1}','SYSTEM',NOW(),NOW(),0)".format(data[x]['name'],data[x]['uuid']))
