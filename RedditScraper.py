@@ -27,7 +27,7 @@ for x in range(0,len(listOfSubreddits)):
 
     posts = sub.get_new()
 
-    While True:
+    while True:
         try:
             time.sleep(2.5)
             post = next(posts)
