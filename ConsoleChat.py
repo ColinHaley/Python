@@ -13,19 +13,23 @@ try:
     import ConfigParser
 except:
     from ConfigParser import ConfigParser
+try:
+    import getpass
+except:
+    from getpass import getpass
 
 # Module level variables
 
 config = ConfigParser.RawConfigParser()
-config.read('../Authentication/ConsoleChat.cfg')
+config.read('Authentication/ConsoleChat.cfg')
 
-__chatpass__	= config.get('ConsoleChat','Password')
+__chatpass__	= config.get('ConsoleChat','password')
 __username__	= raw_input('Who are you? ')
 
 # Validate admin by password confirmation
 
 __validated__ 	= False
 while __validated__ == False:
-    __enterpass__	= raw_input('Please enter the console chat password: ')
+    __enterpass__	= getpass.getpass('Please enter the console chat password: ')
     if __enterpass__ == __chatpass__:
         __validated__ = True
