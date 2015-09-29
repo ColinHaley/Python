@@ -34,3 +34,5 @@ for x in range(0,len(listOfSubreddits)):
             for x in range(0,len(listOfKeyWords)):
                 if listOfKeyWords[x] in post.title:
                     print post.id
+	except:
+		raise ValueError ('sucks to suck')
