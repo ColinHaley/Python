@@ -24,6 +24,11 @@ def sendModMessage(message):
     messageString = 'tellraw @a[team=Admins] [\"\",{\"text\":\"[\",\"color\":\"light_purple\"},{\"text\":\"ModChat\",\"color\":\"dark_purple\",\"bold\":true},{\"text\":\"] \",\"color\":\"light_purple\",\"bold\":false},{\"text\":\"Kazra\",\"color\":\"dark_purple\"},{\"text\":\" : {0}\",\"color\":\"light_purple\"}]'.format(message)
     call(["tmux","send","-t","vanilla",messageString,"ENTER"])
 
+def sendCommand(command):
+    call(["tmux","send","-t","vanilla",command,"ENTER"])
+
+def sendWhisper(player, message):
+    messageString = 'tellraw {0} [\"\",{\"text\":\"<\"},{\"text\":\"Kazra whispers: $1\",\"color\":\"grey\",\"italics\":\"true\"}]'.format(player, message)
 
 config = ConfigParser.RawConfigParser()
 config.read('Authentication/ConsoleChat.cfg')
