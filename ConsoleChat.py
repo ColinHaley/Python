@@ -47,6 +47,9 @@ while __validated__ == False:
     if __enterpass__ == __chatpass__:
         __validated__ = True
 
+
 if __name__ == '__main__':
     if not args.silent:
         notifyConnect()
+    while True:
+        
