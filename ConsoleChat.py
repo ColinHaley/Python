@@ -47,6 +47,7 @@ while __validated__ == False:
     if __enterpass__ == __chatpass__:
         __validated__ = True
 
+__state__ = {'AllChat':True, 'ModChat':False, 'Command':False, 'Whisper':False}
 
 if __name__ == '__main__':
     if not args.silent:
