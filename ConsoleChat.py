@@ -30,6 +30,22 @@ def notifyConnect():
     messageString = 'tellraw @a {\"text\":\"{0} has connected to the console\",\"color\":\"yellow\"}'
     call(["tmux","send","-t",__instance__,messageString,"ENTER"])
 
+def chatInput(message):
+    # first check for state change
+    if message[0] == '!' and len(message) > 1:
+        # allowing sending of '!'
+    
+    else if message[0] == '!' and len(message) == 1:
+        
+def 
+
+def stateChange(message):
+    mode = message[1:]
+    if mode in __state__:
+        # set all values = 0
+        __state__[list(__state__.keys())[list(__state__.values).index(1)]] = False
+	__state__[mode] = True
+
 config = ConfigParser.RawConfigParser()
 config.read('Authentication/ConsoleChat.cfg')
 
