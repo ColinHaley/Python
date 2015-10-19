@@ -1,4 +1,4 @@
-"""
+	"""
 Author: Colin Haley, aka Kazra, aka /u/Gemjump
 Prerequisites:
 	* praw: https://praw.readthedocs.org/en/v3.1.0/
