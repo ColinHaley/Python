@@ -3,7 +3,7 @@ Author: Colin Haley, aka Kazra, aka /u/Gemjump
 Prerequisites:
 	* praw: https://praw.readthedocs.org/en/v3.1.0/
 	* MySQLdb: http://mysql-python.sourceforge.net/
-
+ 
 Written for Python 2.7.2
 
 Enjoy!
