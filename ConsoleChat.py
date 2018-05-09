@@ -1,5 +1,4 @@
 """
-I find bash scripts to be pretty gross.
 This script will replace the nasty direct send commands used right now
 with a more elegant script that enables commands, moderator chats, and direct messages.
 """
